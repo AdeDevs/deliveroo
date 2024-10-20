@@ -109,9 +109,6 @@ a {
 }
 
 @media (max-width: 650px) {
-    .auth {
-        background-image: url(../assets/mb-bg.jpg);
-    }
     .auth form {
         width: 100%;
     }
