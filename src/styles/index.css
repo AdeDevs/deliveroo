@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Athiti:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Young+Serif&display=swap");
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.auth {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #a2a2a2;
+    display: flex;
+    background-image: url(../assets/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+.auth h1 {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+}
+
+.auth form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.auth input {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    box-sizing: border-box;
+    border-radius: 7px;
+    border: none;
+    padding: 15px 10px;
+    font-family: "Poppins", sans-serif;
+    border: 2px solid #525252;
+    color: #fff;
+    background-color: #0000003b;
+    transition: 400ms;
+    &::placeholder {
+        color: #525252;
+    }
+    &:hover {
+        border: 2px solid #fff;
+    }
+    &:hover::placeholder {
+        color: #fff;
+    }
+    &:focus {
+        border: 2px solid #ffffff;
+        background-color: #000;
+    }
+}
+
+.auth button {
+    padding: 15px 0;
+    font-family: "Montserrat", sans-serif;
+    margin: 10px auto;
+    width: 100%;
+    border-radius: 7px;
+    font-size: 15px;
+    box-sizing: border-box;
+    border: none;
+    display: block;
+    transition: 400ms;
+    border: 2px solid #000;
+    &:hover {
+        background-color: #000;
+        color: #fff;
+        border-color: #fff;
+    }
+}
+
+.options {
+    justify-content: space-between;
+    width: 100%;
+    display: inline-flex;
+}
+
+.options a {
+    width: 100%;
+}
+
+#in, #up {
+    margin-right: 10px;
+}
+
+.auth button span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.auth button ion-icon {
+    margin-left: 5px;
+}
+
+@media (max-width: 950px) {
+    .auth form {
+        width: 70%;
+    }
+}
+
+@media (max-width: 650px) {
+    .auth {
+        background-image: url(../assets/mb-bg.jpg);
+        background-size: contain;
+    }
+    .auth form {
+        width: 100%;
+    }
+    .options {
+        display: block;
+    }
+    #in, #up {
+        margin-right: 0;
+    }
+}
