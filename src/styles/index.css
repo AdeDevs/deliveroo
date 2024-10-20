@@ -130,12 +130,3 @@ a {
         margin-right: 0;
     }
 }
-
-@media (max-height: 600px) {
-    .auth {
-        height: fit-content;
-    }
-    .gap {
-        padding: 30px;
-    }
-}

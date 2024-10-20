@@ -261,3 +261,12 @@ nav ul li ion-icon {
         }
     }
 }
+
+/* @media (max-height: 550px) and (width:1075px) {
+    .nav-page nav {
+        position: relative;
+    }
+    .gap {
+        padding: 0;
+    }
+} */
