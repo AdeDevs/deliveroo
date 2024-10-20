@@ -109,6 +109,13 @@ a {
 }
 
 @media (max-width: 650px) {
+    .gap {
+        background-color: red;
+        padding: 15px;
+    }
+    .auth {
+        background-position: right;
+    }
     .auth form {
         width: 100%;
     }
@@ -121,5 +128,14 @@ a {
     }
     #in, #up {
         margin-right: 0;
+    }
+}
+
+@media (max-height: 600px) {
+    .auth {
+        height: fit-content;
+    }
+    .gap {
+        padding: 30px;
     }
 }
