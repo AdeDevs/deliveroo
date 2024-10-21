@@ -207,7 +207,7 @@ nav ul li ion-icon {
       padding: 5px;
     }
     nav ul li:nth-last-child(2) {
-      margin-right: 29px;
+      margin-right: 23px;
     }
     nav ul li {
       margin: 0;
@@ -243,6 +243,15 @@ nav ul li ion-icon {
 }
 
 @media (max-width: 550px) {
+  .nav-page nav {
+    padding: 20px 15px;
+  }
+  .open-menu {
+    top: 40px;
+  }
+  .close-menu {
+    top: 20px;
+  }
     #cart {
       display: none;
     }

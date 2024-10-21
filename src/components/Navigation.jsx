@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import '../styles/routes.css'
 
 function NavBar() {
   const [activeMenu, setActiveMenu] = useState("Categories");
