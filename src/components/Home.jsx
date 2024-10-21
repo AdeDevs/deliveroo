@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 function HomePage() {
     return (
         <div className="home">
@@ -7,7 +9,7 @@ function HomePage() {
                     <p>
                         Meal prepared with love and care to suit your taste every time, great taste and healthy, eat clean, eat real food
                     </p>
-                    <button>Order Now</button>
+                    <NavLink to="/signin"> <button>Order Now</button> </NavLink>
                     <ul>
                         <li>
                             <h2><span><ion-icon name="time"></ion-icon></span> Opening Hours</h2>
