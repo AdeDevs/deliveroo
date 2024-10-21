@@ -49,14 +49,14 @@ function NavBar() {
                 </a>
               </li>
               <li className={activeMenu === "Store" ? "active" : ""}>
-                <a onClick={() => close("Store")} href="#">
+                <NavLink onClick={() => close("Store")} to="/order">
                   Order Now
-                </a>
+                </NavLink>
               </li>
               <li id="login-mob">
-                <a onClick={() => close("Login")} href="#">
+                <NavLink onClick={() => close("Login")} to="/signin">
                   Login
-                </a>
+                </NavLink>
               </li>
               <label htmlFor="check" className="close-menu">
                 <ion-icon name="close-outline" color="light"></ion-icon>
@@ -71,12 +71,15 @@ function NavBar() {
                 <input type="text" placeholder="Search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} onKeyDown={handleKeyDown} />
             </span>
             <li>
+              <NavLink>
               <ion-icon name="cart-outline"></ion-icon>{" "}
               <span id="cart">Cart (0)</span>
+              </NavLink>
             </li>
             <li id="login-desk">
-              <ion-icon name="person-circle-outline"></ion-icon>
+              <NavLink to="/signin"> <ion-icon name="person-circle-outline"></ion-icon>
               <span id="login">Login</span>
+              </NavLink>
             </li>
           </ul>
         </nav>

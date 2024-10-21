@@ -99,6 +99,10 @@ nav ul li.active::before {
   transform: scaleX(1);
 }
 
+nav ul li a {
+  align-items: center;
+  display: inline-flex;
+}
 
 nav ul li ion-icon {
   margin-right: 5px;
@@ -159,7 +163,7 @@ nav ul li ion-icon {
   right: 9px;
 }
 
-#check {
+#check, #login-mob {
   display: none;
 }
 

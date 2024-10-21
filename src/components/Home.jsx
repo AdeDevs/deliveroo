@@ -9,7 +9,7 @@ function HomePage() {
                     <p>
                         Meal prepared with love and care to suit your taste every time, great taste and healthy, eat clean, eat real food
                     </p>
-                    <NavLink to="/signin"> <button>Order Now</button> </NavLink>
+                    <NavLink to="/order"> <button>Order Now</button> </NavLink>
                     <ul>
                         <li>
                             <h2><span><ion-icon name="time"></ion-icon></span> Opening Hours</h2>
