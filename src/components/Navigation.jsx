@@ -202,7 +202,7 @@ function NavBar() {
                 <Counter />
               </li>
             </ul>
-            <ul className="order-item">
+            {/* <ul className="order-item">
               <li>
                 <div>
                   <h1>Amala and Egusi</h1>
@@ -255,7 +255,49 @@ function NavBar() {
                 </div>
                 <Counter />
               </li>
-            </ul>
+            </ul> */}
+          </div>
+          <div className="order-extras">
+            <form action="">
+              <div className="add-order-info">
+                <div>
+                  <h1>Promo Code <span> (Optional) </span></h1>
+                  <input type="text" placeholder="Promo Code"/>
+                </div>
+                <div>
+                  <h1>Choose Address</h1>
+                  <input type="text" required placeholder="Choose Address"/>
+                </div>
+                <div>
+                  <h1>Add Remark <span> (Optional) </span></h1>
+                  <input type="text" placeholder="Add Remark"/>
+                </div>
+              </div>
+              <div className="order-details">
+                <ul>
+                  <li>
+                    <h1>Sub Total <span> (5 Items) </span></h1>
+                    <p>₦45,000</p>
+                  </li>
+                  <li>
+                    <h1>Delivery Fee</h1>
+                    <p>₦1,500</p>
+                  </li>
+                  <li>
+                    <h1>Service Fee</h1>
+                    <p>₦0</p>
+                  </li>
+                  <li>
+                    <h1>Total</h1>
+                    <p>₦46,500</p>
+                  </li>
+                </ul>
+              </div>
+              <div className="confirm-order">
+                <button>Place Order</button>
+                <button>Clear Order</button>
+              </div>
+            </form>
           </div>
         </nav>
       </div>
