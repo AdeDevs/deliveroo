@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import '../styles/cart.css'
-import { Route, Routes } from "react-router-dom"
-import { SignIn, SignUp } from "./Authentication"
-import HomePage from "./Home"
-import Orders from "./Order"
-
+import "../styles/cart.css";
+import { Route, Routes } from "react-router-dom";
+import { SignIn, SignUp } from "./Authentication";
+import HomePage from "./Home";
+import Orders from "./Order";
 
 const Counter = () => {
   // Local state for each Counter component instance
@@ -23,9 +22,13 @@ const Counter = () => {
 
   return (
     <div className="order-qty">
-      <button onClick={decrement}><ion-icon name="remove"></ion-icon></button>
+      <button onClick={decrement}>
+        <ion-icon name="remove"></ion-icon>
+      </button>
       <span>{count}</span>
-      <button onClick={increment}><ion-icon name="add"></ion-icon></button>
+      <button onClick={increment}>
+        <ion-icon name="add"></ion-icon>
+      </button>
     </div>
   );
 };
@@ -33,7 +36,7 @@ const Counter = () => {
 function NavBar() {
   const [activeMenu, setActiveMenu] = useState("Categories");
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [isCartOpen, setIsCartOpen] = useState(false);
   // Function to toggle cart
   const toggleCart = () => {
@@ -41,9 +44,9 @@ function NavBar() {
   };
 
   const handleKeyDown = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       // Trigger the search functionality
-      console.log('Search initiated for:', searchTerm);
+      console.log("Search initiated for:", searchTerm);
       // You can call your search function here, e.g.:
       // performSearch(searchTerm);
     }
@@ -60,68 +63,81 @@ function NavBar() {
 
   return (
     <div className="nav-page">
-        <nav className="nav-bar">
-          <div className="first">
-            <h1>
-              <NavLink to="/"> DELIVEROO </NavLink>
-            </h1>
-            <input
-              type="checkbox"
-              id="check"
-              checked={isMenuOpen}
-              onChange={toggleMenu}
-            />
-            <ul className={`menu ${isMenuOpen ? "open" : "closed"}`}>
-              <li className={activeMenu === "Categories" ? "active" : ""}>
-                <a onClick={() => close("Categories")} href="#">
-                  Categories
-                </a>
-              </li>
-              <li className={activeMenu === "Collections" ? "active" : ""}>
-                <a onClick={() => close("Collections")} href="#">
-                  Why Deliveroo
-                </a>
-              </li>
-              <li className={activeMenu === "Store" ? "active" : ""}>
-                <NavLink onClick={() => close("Store")} to="/order">
-                  Order Now
-                </NavLink>
-              </li>
-              <li id="login-mob">
-                <NavLink onClick={() => close("Login")} to="/signin">
-                  Login
-                </NavLink>
-              </li>
-              <label htmlFor="check" className="close-menu">
-                <ion-icon name="close-outline" color="light"></ion-icon>
-              </label>
-            </ul>
-            <label htmlFor="check" className="open-menu">
-              <ion-icon name="menu-outline" color="light"></ion-icon>
-            </label>
-          </div>
-          <ul>
-            <span id="search">
-                <input type="text" placeholder="Search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} onKeyDown={handleKeyDown} />
-            </span>
-            <li onClick={toggleCart}>
-              <ion-icon name="cart-outline"></ion-icon>{" "}
-              <span id="cart">Cart (0)</span>
+      <nav className="nav-bar">
+        <div className="first">
+          <h1>
+            <NavLink to="/"> DELIVEROO </NavLink>
+          </h1>
+          <input
+            type="checkbox"
+            id="check"
+            checked={isMenuOpen}
+            onChange={toggleMenu}
+          />
+          <ul className={`menu ${isMenuOpen ? "open" : "closed"}`}>
+            <li className={activeMenu === "Categories" ? "active" : ""}>
+              <a onClick={() => close("Categories")} href="#">
+                Categories
+              </a>
             </li>
-            <li id="login-desk">
-              <NavLink to="/signin"> <ion-icon name="person-circle-outline"></ion-icon>
-              <span id="login">Login</span>
+            <li className={activeMenu === "Collections" ? "active" : ""}>
+              <a onClick={() => close("Collections")} href="#">
+                Why Deliveroo
+              </a>
+            </li>
+            <li className={activeMenu === "Store" ? "active" : ""}>
+              <NavLink onClick={() => close("Store")} to="/order">
+                Order Now
               </NavLink>
             </li>
+            <li id="login-mob">
+              <NavLink onClick={() => close("Login")} to="/signin">
+                Login
+              </NavLink>
+            </li>
+            <label htmlFor="check" className="close-menu">
+              <ion-icon name="close-outline" color="light"></ion-icon>
+            </label>
           </ul>
-        </nav>
-        {isCartOpen && <div className={`overlay ${isCartOpen ? 'show' : ''}`} onClick={toggleCart}></div>}
-      <div className={`cart ${isCartOpen ? 'show' : ''}`}>
+          <label htmlFor="check" className="open-menu">
+            <ion-icon name="menu-outline" color="light"></ion-icon>
+          </label>
+        </div>
+        <ul>
+          <span id="search">
+            <input
+              type="text"
+              placeholder="Search"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyDown={handleKeyDown}
+            />
+          </span>
+          <li onClick={toggleCart}>
+            <ion-icon name="cart-outline"></ion-icon>{" "}
+            <span id="cart">Cart (10)</span>
+          </li>
+          <li id="login-desk">
+            <NavLink to="/signin">
+              {" "}
+              <ion-icon name="person-circle-outline"></ion-icon>
+              <span id="login">Login</span>
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+      {isCartOpen && (
+        <div
+          className={`overlay ${isCartOpen ? "show" : ""}`}
+          onClick={toggleCart}
+        ></div>
+      )}
+      <div className={`cart ${isCartOpen ? "show" : ""}`}>
         <nav>
           <section className="cart-header">
             <h1>Checkout</h1>
             <ul>
-              <li> 
+              <li>
                 <ion-icon name="cart-outline" />
                 <p>
                   Cart <button id="cart-number">10</button>
@@ -243,7 +259,7 @@ function NavBar() {
           </div>
         </nav>
       </div>
-        <Routes>
+      <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/order" element={<Orders />} />
         <Route path="signin" element={<SignIn />} />
