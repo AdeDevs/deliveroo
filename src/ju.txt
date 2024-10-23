@@ -1,0 +1,176 @@
+      {isCartOpen && <div className={`overlay ${isCartOpen ? 'show' : ''}`} onClick={toggleCart}></div>}
+      <div className={`cart ${isCartOpen ? 'show' : ''}`}>
+        <nav>
+          <section className="cart-header">
+            <h1>Checkout</h1>
+            <ul>
+              <li> 
+                <ion-icon name="cart-outline" />
+                <p>
+                  Cart <button id="cart-number">10</button>
+                </p>
+                {/* Close Button */}
+                <ion-icon name="close-outline" onClick={toggleCart} />
+              </li>
+            </ul>
+          </section>
+          <div className="order-list">
+            <ul className="order-item">
+              <li>
+                <div>
+                  <h1>Jollof Rice</h1>
+                  <p>#7,500</p>
+                </div>
+                <div className="order-qty">
+                  <button onClick={decrement}><ion-icon name="remove"></ion-icon></button>
+                  <span>{count}</span>
+                  <button onClick={increment}><ion-icon name="add"></ion-icon></button>
+                </div>
+              </li>
+            </ul>
+            <ul className="order-item">
+              <li>
+                <div>
+                  <h1>Fried Rice</h1>
+                  <p>#7,500</p>
+                </div>
+                <div className="order-qty">
+                  <button onClick={decrement}><ion-icon name="remove"></ion-icon></button>
+                  <span>{count}</span>
+                  <button onClick={increment}><ion-icon name="add"></ion-icon></button>
+                </div>
+              </li>
+            </ul>
+            <ul className="order-item">
+              <li>
+                <div>
+                  <h1>Moi Moi</h1>
+                  <p>#3,500</p>
+                </div>
+                <div className="order-qty">
+                  <button onClick={decrement}><ion-icon name="remove"></ion-icon></button>
+                  <span>{count}</span>
+                  <button onClick={increment}><ion-icon name="add"></ion-icon></button>
+                </div>
+              </li>
+            </ul>
+            <ul className="order-item">
+              <li>
+                <div>
+                  <h1>Ice Cream</h1>
+                  <p>#10,000</p>
+                </div>
+                <div className="order-qty">
+                  <button onClick={decrement}><ion-icon name="remove"></ion-icon></button>
+                  <span>{count}</span>
+                  <button onClick={increment}><ion-icon name="add"></ion-icon></button>
+                </div>
+              </li>
+            </ul>
+            <ul className="order-item">
+              <li>
+                <div>
+                  <h1>Coleslaw</h1>
+                  <p>#5,000</p>
+                </div>
+                <div className="order-qty">
+                  <button onClick={decrement}><ion-icon name="remove"></ion-icon></button>
+                  <span>{count}</span>
+                  <button onClick={increment}><ion-icon name="add"></ion-icon></button>
+                </div>
+              </li>
+            </ul>
+            <ul className="order-item">
+              <li>
+                <div>
+                  <h1>Ewa Agoyin</h1>
+                  <p>#5,000</p>
+                </div>
+                <div className="order-qty">
+                  <button onClick={decrement}><ion-icon name="remove"></ion-icon></button>
+                  <span>{count}</span>
+                  <button onClick={increment}><ion-icon name="add"></ion-icon></button>
+                </div>
+              </li>
+            </ul>
+            <ul className="order-item">
+              <li>
+                <div>
+                  <h1>Amala and Egusi</h1>
+                  <p>#4,000</p>
+                </div>
+                <div className="order-qty">
+                  <button onClick={decrement}><ion-icon name="remove"></ion-icon></button>
+                  <span>{count}</span>
+                  <button onClick={increment}><ion-icon name="add"></ion-icon></button>
+                </div>
+              </li>
+            </ul>
+            <ul className="order-item">
+              <li>
+                <div>
+                  <h1>Chicken and Chips</h1>
+                  <p>#4,500</p>
+                </div>
+                <div className="order-qty">
+                  <button onClick={decrement}><ion-icon name="remove"></ion-icon></button>
+                  <span>{count}</span>
+                  <button onClick={increment}><ion-icon name="add"></ion-icon></button>
+                </div>
+              </li>
+            </ul>
+            <ul className="order-item">
+              <li>
+                <div>
+                  <h1>Shawarma</h1>
+                  <p>#3,500</p>
+                </div>
+                <div className="order-qty">
+                  <button onClick={decrement}><ion-icon name="remove"></ion-icon></button>
+                  <span>{count}</span>
+                  <button onClick={increment}><ion-icon name="add"></ion-icon></button>
+                </div>
+              </li>
+            </ul>
+            <ul className="order-item">
+              <li>
+                <div>
+                  <h1>Pizza (Family)</h1>
+                  <p>#7,000</p>
+                </div>
+                <div className="order-qty">
+                  <button onClick={decrement}><ion-icon name="remove"></ion-icon></button>
+                  <span>{count}</span>
+                  <button onClick={increment}><ion-icon name="add"></ion-icon></button>
+                </div>
+              </li>
+            </ul>
+            <ul className="order-item">
+              <li>
+                <div>
+                  <h1>Ewa Agoyin</h1>
+                  <p>#5,000</p>
+                </div>
+                <div className="order-qty">
+                  <button onClick={decrement}><ion-icon name="remove"></ion-icon></button>
+                  <span>{count}</span>
+                  <button onClick={increment}><ion-icon name="add"></ion-icon></button>
+                </div>
+              </li>
+            </ul>
+            <ul className="order-item">
+              <li>
+                <div>
+                  <h1>Ewa Agoyin</h1>
+                  <p>#5,000</p>
+                </div>
+                <div className="order-qty">
+                  <button onClick={decrement}><ion-icon name="remove"></ion-icon></button>
+                  <span>{count}</span>
+                  <button onClick={increment}><ion-icon name="add"></ion-icon></button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>

@@ -8,13 +8,6 @@ function App() {
   return (
     <div>
       <NavBar />
-      <div className="gap"></div>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/order" element={<Orders />} />
-        <Route path="signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
-      </Routes>
     </div>
   )
 }

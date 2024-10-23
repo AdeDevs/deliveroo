@@ -5,6 +5,7 @@ import './styles/reset.css'
 import './styles/index.css'
 import './styles/routes.css'
 import './styles/home.css'
+import './styles/order.css'
 import { BrowserRouter } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(

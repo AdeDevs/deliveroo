@@ -7,7 +7,7 @@ a {
   color: inherit;
 }
 
-.nav-page nav {
+.nav-page .nav-bar {
   color: #fff;
   display: flex;
   padding: 15px;
@@ -15,7 +15,8 @@ a {
   justify-content: space-between;
   align-items: center;
   background-color: #f6ae32;
-  position: fixed;
+  position: sticky;
+  top: 0;
   box-sizing: border-box;
 }
 
@@ -35,12 +36,12 @@ a {
   margin-left: 50px;
 }
 
-.menu, nav ul {
+.menu, .nav-bar ul {
   display: inline-flex;
   align-items: center;
 }
 
-.menu li, nav ul li {
+.menu li, .nav-bar ul li {
   padding: 5px 7px;
   margin: 0 3px;
   list-style-type: none;
@@ -49,7 +50,7 @@ a {
   cursor: pointer;
 }
 
-nav ul li {
+.nav-bar ul li {
   display: inline-flex;
   align-items: center;
   width: fit-content;
@@ -65,12 +66,12 @@ nav ul li {
   transition: 0.8s;
 }
 
-nav ul li:hover {
+.nav-bar ul li:hover {
   background-position: 0;
   color: #a8dadc;
 }
 
-nav ul li::before {
+.nav-bar ul li::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -84,27 +85,27 @@ nav ul li::before {
   transition: transform 0.7s ease-in-out;
 }
 
-nav ul li:hover::before {
+.nav-bar ul li:hover::before {
   transform-origin: left;
   transform: scaleX(1);
 }
 
-nav ul li.active {
+.nav-bar ul li.active {
   background-position: 0;
   color: #a8dadc;
 }
 
-nav ul li.active::before {
+.nav-bar ul li.active::before {
   transform-origin: left; 
   transform: scaleX(1);
 }
 
-nav ul li a {
+.nav-bar ul li a {
   align-items: center;
   display: inline-flex;
 }
    
-nav ul li ion-icon {
+.nav-bar ul li ion-icon {
   margin-right: 5px;
   color: light;
   font-size: 18px;
@@ -187,7 +188,7 @@ nav ul li ion-icon {
 }
 
 @media (max-width: 700px) {
-    .menu {
+    .nav-bar .menu {
       width: 100%;
       height: fit-content;
       position: fixed;
@@ -206,14 +207,14 @@ nav ul li ion-icon {
       box-sizing: border-box;
       padding-top: 30px;
     }
-    .menu li {
+    .nav-bar .menu li {
       margin: 20px 0;
       padding: 5px;
     }
-    nav ul li:nth-last-child(2) {
+    .nav-bar ul li:nth-last-child(2) {
       margin-right: 23px;
     }
-    nav ul li {
+    .nav-bar ul li {
       margin: 0;
       padding: 5px;
     }
@@ -244,10 +245,14 @@ nav ul li ion-icon {
             opacity: 1;
         }
     }
+    .cart {
+      width: 100%;
+    }
+
 }
 
 @media (max-width: 550px) {
-  .nav-page nav {
+  .nav-page .nav-bar {
     padding: 20px 15px;
   }
   .open-menu {
@@ -274,12 +279,3 @@ nav ul li ion-icon {
         }
     }
 }
-
-/* @media (max-height: 550px) and (width:1075px) {
-    .nav-page nav {
-        position: relative;
-    }
-    .gap {
-        padding: 0;
-    }
-} */
