@@ -202,7 +202,7 @@ function NavBar() {
                 <Counter />
               </li>
             </ul>
-            {/* <ul className="order-item">
+            <ul className="order-item">
               <li>
                 <div>
                   <h1>Amala and Egusi</h1>
@@ -255,7 +255,7 @@ function NavBar() {
                 </div>
                 <Counter />
               </li>
-            </ul> */}
+            </ul>
           </div>
           <div className="order-extras">
             <form action="">
