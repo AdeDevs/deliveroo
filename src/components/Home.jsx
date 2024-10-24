@@ -27,6 +27,100 @@ function HomePage() {
                 </div>
                 <div className="landing-food"></div>
             </header>
+            <main>
+                <div className="short-categories">
+                    <header>
+                        <h1>Get Into It</h1>
+                        <NavLink to="/order">Check Out Our Full Menu</NavLink>
+                    </header>
+                    <div className="short-menu">
+                        <div>
+                            <section className="food-image"></section>
+                            <section className="food-info">
+                                <aside>
+                                    <h1>Jollof Rice</h1>
+                                    <p>₦ 3,500</p>
+                                </aside>
+                                <aside>
+                                    <h2> <ion-icon name="cart-outline"></ion-icon> </h2>
+                                </aside>
+                            </section>
+                        </div>
+                        <div>
+                            <section className="fried-rice"></section>
+                            <section className="food-info">
+                                <aside>
+                                    <h1>Fried Rice</h1>
+                                    <p>₦ 3,500</p>
+                                </aside>
+                                <aside>
+                                    <h2> <ion-icon name="cart-outline"></ion-icon> </h2>
+                                </aside>
+                            </section>
+                        </div>
+                        <div>
+                            <section className="shawarma"></section>
+                            <section className="food-info">
+                                <aside>
+                                    <h1>Shawarma</h1>
+                                    <p>₦ 2,500</p>
+                                </aside>
+                                <aside>
+                                    <h2> <ion-icon name="cart-outline"></ion-icon> </h2>
+                                </aside>
+                            </section>
+                        </div>
+                        <div>
+                            <section className="coconut-rice"></section>
+                            <section className="food-info">
+                                <aside>
+                                    <h1>Coconut Rice</h1>
+                                    <p>₦ 4,000</p>
+                                </aside>
+                                <aside>
+                                    <h2> <ion-icon name="cart-outline"></ion-icon> </h2>
+                                </aside>
+                            </section>
+                        </div>
+                        <div>
+                            <section className="amala"></section>
+                            <section className="food-info">
+                                <aside>
+                                    <h1>Amala</h1>
+                                    <p>₦ 2,500</p>
+                                </aside>
+                                <aside>
+                                    <h2> <ion-icon name="cart-outline"></ion-icon> </h2>
+                                </aside>
+                            </section>
+                        </div>
+                        <div>
+                            <section className="pasta"></section>
+                            <section className="food-info">
+                                <aside>
+                                    <h1>Pasta</h1>
+                                    <p>₦ 4,000</p>
+                                </aside>
+                                <aside>
+                                    <h2> <ion-icon name="cart-outline"></ion-icon> </h2>
+                                </aside>
+                            </section>
+                        </div>
+                        <div>
+                            <section className="ice-cream"></section>
+                            <section className="food-info">
+                                <aside>
+                                    <h1>Ice Cream</h1>
+                                    <p>₦ 5,000</p>
+                                </aside>
+                                <aside>
+                                    <h2> <ion-icon name="cart-outline"></ion-icon> </h2>
+                                </aside>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
     )
 }

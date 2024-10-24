@@ -82,6 +82,101 @@
     background-repeat: no-repeat;
 }
 
+.short-categories {
+    margin: 15px 0;
+}
+
+.short-categories header a{
+    color: #f6ae32;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.short-categories .short-menu {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    display: flex;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.short-categories .short-menu div {
+    width: 300px;
+    margin: 10px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.food-image, .shawarma, .coconut-rice, .ice-cream, .fried-rice, .amala, .pasta {
+    height: 270px;
+    width: 100%;
+    background-image: url(../assets/jollof-bg-removebg-preview.png);
+    background-size: 180px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #e6e6e6;
+    &.shawarma {
+    background-image: url(../assets/shawarma.png);
+    background-size: 200px;
+    }
+    &.coconut-rice {
+        background-image: url(../assets/coconut-rice.png);
+    }
+    &.ice-cream {
+        background-image: url(../assets/ice-cream.png);
+    }
+    &.fried-rice {
+        background-image: url(../assets/fried-rice.png);
+    }
+    &.amala {
+        background-image: url(../assets/amala.png);
+    }
+    &.pasta {
+        background-image: url(../assets/pasta.png);
+    }
+}
+
+
+.short-menu div .food-info{
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    font-family: "Montserrat", sans-serif;
+    padding: 10px 0;
+    color: #000;
+    border-top: 1px solid #000;
+    background-color: #e6e6e6;
+    box-sizing: border-box;
+    padding: 7px;
+}
+
+.food-info aside h1 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.food-info p {
+    font-size: 13px;
+    color: #7a7a7a;
+}
+
+.food-info h2 {
+    font-size: 25px;
+    color: #fac172;
+    font-weight: 600;
+    transition: 400ms;
+    padding: 0 5px 0 5px;
+    cursor: pointer;
+    &:hover {
+        color: #C98728;
+    }
+}
+
 @media (max-width: 850px) {
     .home header div > p {
         width: 100%;

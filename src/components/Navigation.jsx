@@ -3,8 +3,9 @@ import { NavLink } from "react-router-dom";
 import "../styles/cart.css";
 import { Route, Routes } from "react-router-dom";
 import { SignIn, SignUp } from "./Authentication";
-import HomePage from "./Home";
 import Orders from "./Order";
+import HomePage from "./Home";
+import CategoriesPage from "./Categories";
 
 const Counter = () => {
   // Local state for each Counter component instance
@@ -152,7 +153,7 @@ function NavBar() {
               <li>
                 <div>
                   <h1>Jollof Rice</h1>
-                  <p>#7,500</p>
+                  <p>₦ 7,500</p>
                 </div>
                 <Counter />
               </li>
@@ -161,7 +162,7 @@ function NavBar() {
               <li>
                 <div>
                   <h1>Fried Rice</h1>
-                  <p>#7,500</p>
+                  <p>₦ 7,500</p>
                 </div>
                 <Counter />
               </li>
@@ -170,7 +171,7 @@ function NavBar() {
               <li>
                 <div>
                   <h1>Moi Moi</h1>
-                  <p>#3,500</p>
+                  <p>₦ 3,500</p>
                 </div>
                 <Counter />
               </li>
@@ -179,7 +180,7 @@ function NavBar() {
               <li>
                 <div>
                   <h1>Ice Cream</h1>
-                  <p>#10,000</p>
+                  <p>₦ 10,000</p>
                 </div>
                 <Counter />
               </li>
@@ -188,7 +189,7 @@ function NavBar() {
               <li>
                 <div>
                   <h1>Coleslaw</h1>
-                  <p>#5,000</p>
+                  <p>₦ 5,000</p>
                 </div>
                 <Counter />
               </li>
@@ -197,7 +198,7 @@ function NavBar() {
               <li>
                 <div>
                   <h1>Ewa Agoyin</h1>
-                  <p>#5,000</p>
+                  <p>₦ 5,000</p>
                 </div>
                 <Counter />
               </li>
@@ -206,7 +207,7 @@ function NavBar() {
               <li>
                 <div>
                   <h1>Amala and Egusi</h1>
-                  <p>#4,000</p>
+                  <p>₦ 4,000</p>
                 </div>
                 <Counter />
               </li>
@@ -215,7 +216,7 @@ function NavBar() {
               <li>
                 <div>
                   <h1>Chicken and Chips</h1>
-                  <p>#4,500</p>
+                  <p>₦ 4,500</p>
                 </div>
                 <Counter />
               </li>
@@ -224,7 +225,7 @@ function NavBar() {
               <li>
                 <div>
                   <h1>Shawarma</h1>
-                  <p>#3,500</p>
+                  <p>₦ 3,500</p>
                 </div>
                 <Counter />
               </li>
@@ -233,7 +234,7 @@ function NavBar() {
               <li>
                 <div>
                   <h1>Pizza (Family)</h1>
-                  <p>#7,000</p>
+                  <p>₦ 7,000</p>
                 </div>
                 <Counter />
               </li>
@@ -242,7 +243,7 @@ function NavBar() {
               <li>
                 <div>
                   <h1>Saghetti</h1>
-                  <p>#2,000</p>
+                  <p>₦ 2,000</p>
                 </div>
                 <Counter />
               </li>
@@ -251,7 +252,7 @@ function NavBar() {
               <li>
                 <div>
                   <h1>Pounded yam and egusi</h1>
-                  <p>#2,500</p>
+                  <p>₦ 2,500</p>
                 </div>
                 <Counter />
               </li>
@@ -303,6 +304,7 @@ function NavBar() {
       </div>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/categories" element={<CategoriesPage />} />
         <Route path="/order" element={<Orders />} />
         <Route path="signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
