@@ -74,7 +74,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f6ae32;
+    background-color: #f1b348;
+    transition: 300ms;
+    &:hover {
+        background-color: #f6ae32;
+    }
 }
 
 .food-image img {
