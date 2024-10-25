@@ -31,7 +31,7 @@ function HomePage() {
                 <div className="short-categories">
                     <header>
                         <h1>Get Into It</h1>
-                        <NavLink to="/order">Check Out Our Full Menu</NavLink>
+                        <NavLink to="/categories">Check Out Our Full Menu</NavLink>
                     </header>
                     <div className="short-menu">
                         <div>

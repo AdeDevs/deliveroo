@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import "../styles/cart.css";
 import { Route, Routes } from "react-router-dom";
 import { SignIn, SignUp } from "./Authentication";
@@ -39,6 +39,14 @@ function NavBar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setActiveMenu("");
+    }
+  }, [location.pathname]);
+
   // Function to toggle cart
   const toggleCart = () => {
     setIsCartOpen(!isCartOpen);
@@ -66,45 +74,55 @@ function NavBar() {
     <div className="nav-page">
       <nav className="nav-bar">
         <div className="first">
-          <h1>
-            <NavLink to="/"> DELIVEROO </NavLink>
-          </h1>
-          <input
-            type="checkbox"
-            id="check"
-            checked={isMenuOpen}
-            onChange={toggleMenu}
-          />
-          <ul className={`menu ${isMenuOpen ? "open" : "closed"}`}>
-            <li className={activeMenu === "Categories" ? "active" : ""}>
-              <a onClick={() => close("Categories")} href="#">
-                Categories
-              </a>
-            </li>
-            <li className={activeMenu === "Collections" ? "active" : ""}>
-              <a onClick={() => close("Collections")} href="#">
-                Why Deliveroo
-              </a>
-            </li>
-            <li className={activeMenu === "Store" ? "active" : ""}>
-              <NavLink onClick={() => close("Store")} to="/order">
-                Order Now
-              </NavLink>
-            </li>
-            <li id="login-mob">
-              <NavLink onClick={() => close("Login")} to="/signin">
-                Login
-              </NavLink>
-            </li>
-            <label htmlFor="check" className="close-menu">
-              <ion-icon name="close-outline" color="light"></ion-icon>
-            </label>
-          </ul>
+        <NavLink to="/" end>
+        <h1>DELIVEROO</h1>
+      </NavLink>
+      <input
+        type="checkbox"
+        id="check"
+        checked={isMenuOpen}
+        onChange={toggleMenu}
+      />
+      <ul className={`menu ${isMenuOpen ? "open" : "closed"}`}>
+        <NavLink
+          className={activeMenu === "Categories" ? "active" : ""}
+          onClick={() => close("Categories")}
+          to="/categories"
+        >
+          Categories
+        </NavLink>
+        <NavLink
+          className={activeMenu === "Collections" ? "active" : ""}
+          onClick={() => close("Collections")}
+          to="/signin"
+        >
+          Why Deliveroo
+        </NavLink>
+        <NavLink
+          className={activeMenu === "Store" ? "active" : ""}
+          onClick={() => close("Store")}
+          to="/order"
+        >
+          Order Now
+        </NavLink>
+        <NavLink
+          id="login-mob"
+          className={activeMenu === "Login" ? "active" : ""}
+          onClick={() => close("Login")}
+          to="/signin"
+        >
+          Login
+        </NavLink>
+        <label htmlFor="check" className="close-menu">
+          <ion-icon name="close-outline" color="light"></ion-icon>
+        </label>
+      </ul>
+
           <label htmlFor="check" className="open-menu">
             <ion-icon name="menu-outline" color="light"></ion-icon>
           </label>
         </div>
-        <ul>
+        <ul className="specials">
           <span id="search">
             <input
               type="text"
@@ -262,22 +280,28 @@ function NavBar() {
             <form action="">
               <div className="add-order-info">
                 <div>
-                  <h1>Promo Code <span> (Optional) </span></h1>
-                  <input type="text" placeholder="Promo Code"/>
+                  <h1>
+                    Promo Code <span> (Optional) </span>
+                  </h1>
+                  <input type="text" placeholder="Promo Code" />
                 </div>
                 <div>
                   <h1>Choose Address</h1>
-                  <input type="text" required placeholder="Choose Address"/>
+                  <input type="text" required placeholder="Choose Address" />
                 </div>
                 <div>
-                  <h1>Add Remark <span> (Optional) </span></h1>
-                  <input type="text" placeholder="Add Remark"/>
+                  <h1>
+                    Add Remark <span> (Optional) </span>
+                  </h1>
+                  <input type="text" placeholder="Add Remark" />
                 </div>
               </div>
               <div className="order-details">
                 <ul>
                   <li>
-                    <h1>Sub Total <span> (5 Items) </span></h1>
+                    <h1>
+                      Sub Total <span> (5 Items) </span>
+                    </h1>
                     <p>₦45,000</p>
                   </li>
                   <li>
@@ -304,7 +328,7 @@ function NavBar() {
       </div>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/categories" element={<CategoriesPage />} />
+        <Route path="/categories/*" element={<CategoriesPage />} />
         <Route path="/order" element={<Orders />} />
         <Route path="signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
