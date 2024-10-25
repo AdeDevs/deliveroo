@@ -112,7 +112,7 @@
     overflow: hidden;
 }
 
-.food-image, .shawarma, .coconut-rice, .ice-cream, .fried-rice, .amala, .pasta {
+.food-image, .shawarma, .coconut-rice, .ewa-agoyin, .fried-rice, .amala, .pasta {
     height: 270px;
     width: 100%;
     background-image: url(../assets/jollof-bg-removebg-preview.png);
@@ -127,8 +127,8 @@
     &.coconut-rice {
         background-image: url(../assets/coconut-rice.png);
     }
-    &.ice-cream {
-        background-image: url(../assets/ice-cream.png);
+    &.ewa-agoyin {
+        background-image: url(../assets/ewa-agoyin.png);
     }
     &.fried-rice {
         background-image: url(../assets/fried-rice.png);

@@ -107,10 +107,10 @@ function HomePage() {
                             </section>
                         </div>
                         <div>
-                            <section className="ice-cream"></section>
+                            <section className="ewa-agoyin"></section>
                             <section className="food-info">
                                 <aside>
-                                    <h1>Ice Cream</h1>
+                                    <h1>Ewa Agoyin</h1>
                                     <p>₦ 5,000</p>
                                 </aside>
                                 <aside>
