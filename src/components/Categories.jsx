@@ -3,6 +3,7 @@ import Jollof from "../assets/jollof-bg-removebg-preview.png";
 import CoconutRice from "../assets/food/coconut-rice.png";
 import Amala from "../assets/food/amala.png";
 import ChickenBucket from "../assets/food/chicken.png";
+
 import Coke from "../assets/food/coke.png";
 import Chocolate from "../assets/food/Chocolate.png";
 import Fanta from "../assets/food/Fanta.png";
