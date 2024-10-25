@@ -112,22 +112,34 @@
     overflow: hidden;
 }
 
-.food-image, .drink-image {
+.short-categories .food-image, .fried-rice, .shawarma, .coconut-rice, .amala, .pasta, .ewa-agoyin {
+    background-image: url(../assets/jollof-bg-removebg-preview.png);
+    background-position: center;
+    background-size: 180px;
+    background-repeat: no-repeat;
     height: 230px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: #e6e6e6;
+    &.fried-rice {
+        background-image: url(../assets/food/fried-rice.png);
+    }
+    &.shawarma {
+        background-image: url(../assets/food/shawarma.png);
+    }
+    &.coconut-rice {
+        background-image: url(../assets/food/coconut-rice.png);
+    }
+    &.amala {
+        background-image: url(../assets/food/amala.png);
+    }
+    &.pasta {
+        background-image: url(../assets/food/pasta.png);
+    }
+    &.ewa-agoyin {
+        background-image: url(../assets/food/ewa-agoyin.png);
+    }
 }
 
-.food-image img {
-    width: 160px;
-}
-
-.drink-image img {
-    width: 80px;
-}
 
 .short-menu div .food-info{
     display: inline-flex;

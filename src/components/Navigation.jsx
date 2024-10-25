@@ -91,13 +91,13 @@ function NavBar() {
         >
           Categories
         </NavLink>
-        <NavLink
+        <a
           className={activeMenu === "Collections" ? "active" : ""}
           onClick={() => close("Collections")}
-          to="/signin"
+          href="#"
         >
           Why Deliveroo
-        </NavLink>
+        </a>
         <NavLink
           className={activeMenu === "Store" ? "active" : ""}
           onClick={() => close("Store")}
