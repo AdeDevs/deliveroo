@@ -59,13 +59,13 @@
     justify-content: space-between;
     font-family: "Montserrat", sans-serif;
     padding: 10px 0;
-    height: 80px;
+    height: 60px;
     color: #000;
     border-top: 1px dashed #000;
     background-color: #e6e6e6;
     box-sizing: border-box;
     align-items: center;
-    padding: 7px;
+    padding: 0 7px;
 }
 
 .menu div .food-image, .drink-image {

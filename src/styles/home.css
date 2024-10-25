@@ -147,8 +147,10 @@
     justify-content: space-between;
     font-family: "Montserrat", sans-serif;
     color: #000;
-    border-top: 1px solid #000;
-    background-color: #f6ae32;
+    border-top: 1px dashed #000;
+    background-color: #e6e6e6;
+    height: 60px;
+    align-items: center;
     box-sizing: border-box;
     padding: 7px;
 }
@@ -172,13 +174,6 @@
     cursor: pointer;
     &:hover {
         color: #C98728;
-    }
-}
-
-.short-categories .food-info h2 {
-    color: #fff;
-    &:hover {
-        color: #000;
     }
 }
 
