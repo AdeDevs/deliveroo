@@ -2,6 +2,7 @@ import { NavLink, Route, Routes } from "react-router-dom";
 import Jollof from "../assets/jollof-bg-removebg-preview.png";
 import CoconutRice from "../assets/food/coconut-rice.png";
 import Amala from "../assets/food/amala.png";
+import ChickenBucket from "../assets/food/chicken.png";
 import Coke from "../assets/food/coke.png";
 import Chocolate from "../assets/food/Chocolate.png";
 import Fanta from "../assets/food/Fanta.png";
@@ -217,7 +218,21 @@ function Chicken() {
     return (
       <div className="menu">
       <div>
-        <h1>There's nothing here</h1>
+        <section className="food-image">
+          <img src={ChickenBucket} alt="ChickenBucket" />
+        </section>
+        <section className="food-info">
+          <aside>
+            <h1>Chicken Bucket</h1>
+            <p>₦ 4,500</p>
+          </aside>
+          <aside>
+            <h2>
+              {" "}
+              <ion-icon name="cart-outline"></ion-icon>{" "}
+            </h2>
+          </aside>
+        </section>
       </div>
     </div>
     )
